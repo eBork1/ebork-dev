@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { plaster } from "./fonts";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -23,11 +24,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${plaster.variable} antialiased`}
       >
-        {children}
+        {/* Global background wrapper */}
+        <div className="relative min-h-screen overflow-x-hidden">
+          
+          {/* Base dark gradient */}
+          {/* <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-slate-900 via-teal-900 to-black" /> */}
+
+          {/* Aurora glows */}
+          {/* <div className="pointer-events-none absolute inset-0 -z-10 opacity-40 bg-[radial-gradient(circle_at_30%_20%,rgba(56,189,248,0.25),transparent_65%)]" />
+          <div className="pointer-events-none absolute inset-0 -z-10 opacity-40 bg-[radial-gradient(circle_at_70%_80%,rgba(129,140,248,0.20),transparent_60%)]" /> */}
+          {children}
+        </div>
       </body>
     </html>
   );
