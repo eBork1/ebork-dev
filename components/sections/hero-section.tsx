@@ -43,7 +43,7 @@ export function HeroSection() {
           </Button>
 
           <Button variant="outline" size="lg" asChild>
-            <a href="/Ethan-Borkosky-Resume.pdf" target="_blank">
+            <a href="/resume.pdf" target="_blank">
               Resume
             </a>
           </Button>
