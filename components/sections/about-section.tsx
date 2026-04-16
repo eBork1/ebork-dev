@@ -63,7 +63,7 @@ export function AboutSection() {
   };
 
   return (
-    <section id="skills" className="relative h-[220vh] snap-start">
+    <section id="skills" className="relative h-[108vh] snap-start">
       {/* Sticky container that stays while you scroll through this section */}
       <div className="sticky top-0 h-screen flex flex-col gap-10 pt-8 pb-24">
         {/* Auto-scrolling banner that sticks to the top */}
